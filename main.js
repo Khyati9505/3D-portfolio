@@ -1,93 +1,3 @@
-// import './style.css'
-// import * as THREE from 'three';
-// import { LightProbeHelper } from 'three/addons/helpers/LightProbeHelper.js';
-// import { OrbitControls } from 'three/examples/jsm/Addons.js';
-
-// const scene = new THREE.Scene();
-
-// // (field of view, aspect ratio, view frustum min, view frusctum max)
-// const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1,100);
-
-// const renderer = new THREE.WebGLRenderer({
-//   canvas: document.querySelector('#bg'),
-// });
-// renderer.outputColorSpace = THREE.SRGBColorSpace;
-
-// renderer.setPixelRatio(window.devicePixelRatio);
-// renderer.setSize(window.innerWidth, window.innerHeight);
-// camera.position.setZ(30);
-// camera.position.setX(-3);
-
-// renderer.render(scene, camera);
-
-
-// // geometry 
-// const geometry = new THREE.TorusKnotGeometry( 10, 3, 16, 100); 
-// const material = new THREE.MeshStandardMaterial( { color: 0xff6347 } ); 
-// const torusKnot = new THREE.Mesh( geometry, material ); 
-// scene.add( torusKnot );
-
-
-// // light
-// const pointLight = new THREE.PointLight( 0xffffff);
-// pointLight.position.set( 20, 20, 20 );
-
-// const ambientLight = new THREE.AmbientLight(0xffffff, 0.5); 
-// scene.add( pointLight, ambientLight );
-
-
-// // helper functions
-
-// const lightHelper = new THREE.PointLightHelper(pointLight)
-// const gridHelper = new THREE.GridHelper(200, 50);
-// scene.add(lightHelper, gridHelper)
-
-// const controls= new OrbitControls(camera, renderer.domElement);
-
-// // populate
-// function addStar() {
-//   const geometry = new THREE.SphereGeometry(0.25, 24, 24);
-//   const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
-//   const star = new THREE.Mesh(geometry, material);
-
-//   const [x, y, z] = Array(3)
-//     .fill()
-//     .map(() => THREE.MathUtils.randFloatSpread(100));
-
-//   star.position.set(x, y, z);
-//   scene.add(star);
-// }
-
-// Array(200).fill().forEach(addStar);
-
-
-// // Background
-
-// // const spaceTexture = new THREE.TextureLoader().load('galaxy4.jpg');
-// // scene.background = spaceTexture;
-
-
-
-// const spaceTexture = new THREE.TextureLoader().load('galaxy4.jpg', (texture) => {
-//   texture.colorSpace = THREE.SRGBColorSpace; // For Three.js r125+
-// });
-// scene.background = spaceTexture;
-
-// function animate(){
-//   requestAnimationFrame(animate);
-
-//   torusKnot.rotation.x += 0.01;
-//   torusKnot.rotation.y += 0.005;
-//   torusKnot.rotation.z += 0.01;
-
-//   controls.update();
-
-//   renderer.render(scene,camera);
-// }
-
-
-// animate()
-
 import './style.css';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
@@ -104,23 +14,24 @@ const renderer = new THREE.WebGLRenderer({
 
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
-camera.position.setZ(30);
-camera.position.setX(-3);
+// camera.position.setZ(30);
+// camera.position.setX(-3);
+camera.position.set(-3, 2, 30); 
 
 renderer.render(scene, camera);
 
 // Torus
 
-const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
-const material = new THREE.MeshStandardMaterial({ color: 0xff6347 });
-const torus = new THREE.Mesh(geometry, material);
+const geometry = new THREE.TorusKnotGeometry(6, 1.8, 64, 8, 9, 3);
+const material = new THREE.MeshStandardMaterial({ color: 0x4c0edd, });
+const torusKnot = new THREE.Mesh(geometry, material);
 
-scene.add(torus);
+scene.add(torusKnot);
 
 // Lights
 
 const pointLight = new THREE.PointLight(0xffffff);
-pointLight.position.set(5, 5, 5);
+pointLight.position.set(10, 10, 10);
 
 const ambientLight = new THREE.AmbientLight(0xffffff);
 scene.add(pointLight, ambientLight);
@@ -167,7 +78,7 @@ const moonTexture = new THREE.TextureLoader().load('moon.jpg');
 const normalTexture = new THREE.TextureLoader().load('normal.jpg');
 
 const moon = new THREE.Mesh(
-  new THREE.SphereGeometry(3, 32, 32),
+  new THREE.SphereGeometry(5, 32, 32),
   new THREE.MeshStandardMaterial({
     map: moonTexture,
     normalMap: normalTexture,
@@ -177,7 +88,7 @@ const moon = new THREE.Mesh(
 scene.add(moon);
 
 moon.position.z = 30;
-moon.position.setX(-10);
+moon.position.setX(-15);
 
 person.position.z = -5;
 person.position.x = 2;
@@ -206,9 +117,9 @@ moveCamera();
 function animate() {
   requestAnimationFrame(animate);
 
-  torus.rotation.x += 0.01;
-  torus.rotation.y += 0.005;
-  torus.rotation.z += 0.01;
+  torusKnot.rotation.x += 0.01;
+  torusKnot.rotation.y += 0.005;
+  torusKnot.rotation.z += 0.01;
 
   moon.rotation.x += 0.005;
 
@@ -218,4 +129,3 @@ function animate() {
 }
 
 animate();
-
