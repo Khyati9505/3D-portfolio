@@ -7,81 +7,152 @@
     <title>Khyati's Portfolio</title>
   </head>
   <body>
-
     <canvas id="bg"></canvas>   
-
     <main>
-
       <header>
         <h1>Khyati Bhat</h1>
-        <p style="font-size: 15px;">Github:</p>
-        <p style="font-size: 15px;">Linkedin:</p>
-        <p style="font-size: 15px;">Resume:</p>
+        <p style="font-size: 15px;">
+          <strong>Github:</strong> 
+          <a href="https://github.com/Khyati9505" target="_blank">https://github.com/Khyati9505</a>
+        </p>
+        <p style="font-size: 15px;">
+          <strong>LinkedIn:</strong> 
+          <a href="http://www.linkedin.com/in/khyati-bhat-5846222a8" target="_blank">http://www.linkedin.com/in/khyati-bhat-5846222a8</a>
+        </p>
+        <p style="font-size: 15px;">
+          <strong>Contact Information:</strong> 
+          <a href="mailto:Khyati9505@gmail.com">Khyati9505@gmail.com</a>
+        </p>
       </header>
 
-
       <blockquote>
-        <p>Hi there, welcome to my portfolio! </p>
+        <p>Hi there, welcome to my portfolio!</p>
       </blockquote>
 
       <section>
-        <h2>📜 Manifesto and Achievements </h2>
+        <h2>📜 About Me </h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Passionate biological engineering student at IIT Madras with a strong foundation in computer science and problem-solving. 
+          Committed to leveraging technology for innovative, impactful solutions.
         </p>
 
+        <h2>🏆 Education </h2>
+        <h3>Indian Institute of Technology, Madras</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          B.Tech in Biological Engineering,  CGPA: 8.98/10.0 (2023–2027)
         </p>
-
+        
+        <h3>Base Pre-University College (Karnataka State Board)</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          12th Grade - 99.2% (2023)
         </p>
-
+        <h3>MPV (CBSE)</h3>
+        <p>
+          10th Grade - 99.5% (2021)
+        </p>
       </section>
 
       <section class="light">
-        <h2>👩🏽‍🚀 Projects</h2>
+        <h2>👩 Projects</h2>
+      
+        <!-- Project 1 -->
+        <article>
+          <h3>PathPal: AI-Powered Smart Walking Cane for the Visually Impaired</h3>
+          <p>
+            <strong>Seed Grant:</strong> ₹200,000 | <strong>Patent Pending</strong><br>
+            A smart walking cane integrating multiple machine learning models to empower the visually impaired. Features include:
+          </p>
+          <ul>
+            <li><strong>Grocery Navigation:</strong> YOLOv11 object detection trained on 14+ grocery classes (99.49% mAP).</li>
+            <li><strong>Obstacle Avoidance:</strong> U-Net+MiDaS depth estimation with a 96% Dice coefficient and 90 ms latency.</li>
+            <li><strong>Lane Guidance:</strong> OpenCV-based real-time lane detection at 30 FPS.</li>
+            <li><strong>Haptic Feedback:</strong> 9-point vibrotactile system for intuitive user guidance.</li>
+          </ul>
+          <p>
+            Recognized by IITM Nirmaan for its potential to reduce impact potential
+          </p>
+          <a href="https://github.com/Khyati9505/Pathpal-Sahaay-Project.git">Check it out</a>
+        </article>
+      
+        <!-- Project 2 -->
+        <article>
+          <h3>Enterprise React Admin Dashboard</h3>
+          <p>
+            A modern, responsive, and interactive web application built with React, Tailwind CSS, Recharts, and Framer Motion. Key features include:
+          </p>
+          <ul>
+            <li><strong>Reusable Components:</strong> Modular UI components reduced code redundancy by 20% and accelerated feature development by 30%.</li>
+            <li><strong>Data Visualization:</strong> Recharts-powered dashboards simplified data analysis, cutting time spent by 25%.</li>
+            <li><strong>Routing & Navigation:</strong> Smooth transitions with Framer Motion and dynamic sidebar navigation improved efficiency by 20%.</li>
+            <li><strong>Responsive Design:</strong> Tailwind CSS ensured seamless layouts across all devices.</li>
+          </ul>
+          <a href="flourishing-liger-8eaf44.netlify.app">Check it out</a>
+        </article>
+      
+        <!-- Project 3 -->
+        <article>
+          <h3>LinkedIn Job Scraper Engine</h3>
+          <p>
+            Automated a LinkedIn job extraction pipeline using Selenium and BeautifulSoup. Achievements include:
+          </p>
+          <ul>
+            <li>Scraped 200+ job listings per run with 98% data accuracy via XPATH validation.</li>
+            <li>Exported structured CSV files with job titles, locations, company names, and more.</li>
+          </ul>
+          <a href="https://github.com/Khyati9505/Data-Scraper-.git">Check it out</a>
+        </article>
+      
+        <!-- Project 4 -->
+        <article>
+          <h3>MovieLand: OMDB-Powered React App</h3>
+          <p>A dynamic React-based web application that allows users to search for movies, view detailed information and navigate through results using the OMDB API</p>
+          <a href="https://github.com/Khyati9505/Data-Scraper-.git">Check it out</a>
+        </article>
 
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-
-        <h2>🏆 Accomplishments</h2>
-
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-
-      </section>
-
-      <blockquote>
-        <p>The best way out is always through <br>-Robert Frost</p>
-      </blockquote>
+        <!-- Project 5 -->
+        <article>
+          <h3>Automatic Waste Segregator</h3>
+          <p>A collaborative project with a team of 5 to build a self-segregating dustbin capable of classifying waste into five categories using deep learning and Arduino. Highlights include:</p>
+          <ul>
+            <li><strong>Machine Learning Model:</strong> Mobile Net fine-tuned on a dataset of waste images (90% test accuracy).</li>
+            <li><strong>Sensors & Hardware:</strong> Proximity sensors integrated with Arduino UNO for real-time classification.</li>
+            <li><strong>Latency Optimization:</strong> TensorFlow Lite quantization reduced classification latency to ≤500ms.</li>
+          </ul>
+          <p>This system demonstrated an improvement of up to 80% in segregation accuracy compared to manual sorting methods.</p>
+          <a href="https://github.com/Khyati9505/Automatic-Waste-Segregator.git">Check it out</a>
+        </article>
+      
+        <!-- Project 6 -->
+        <article>
+          <h3>Travel Journal Platform</h3>
+          <p>Developed a data-driven React-based travel journal featuring 10+ curated entries, utilizing JSX, props, and reusable components
+            to reduce code redundancy by 40%, significantly enhancing maintainability and scalability.</p>
+        </article>        
+      </section>      
 
       <section class="left">
-        <h2>🌮 Work History</h2>
+        <h2> 🏆 Scholastic Achievements </h2>
+        <p>
+          • 99.25 percentile in JEE Main 2023 (Among 1.1M+ students)<br>
+          • Achieved State Rank of 200 in the Karnataka Common Entrance Examination and State Rank of 6 in Karnataka State Boards (Class XII)<br>
+          • Represented one of the top 10 all-girls teams in MIMAMSA 2024, IISER Pune’s prestigious national science competition<br>
+          • Honored with the President’s Education Award by President Barack Obama
+        </p>
+      </section>
 
-        <h3>McDonalds</h3>
+      <section>
+        <h2>💻 Technical Skills</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          <strong>Languages:</strong> Python, JavaScript, MATLAB, HTML, CSS<br>
+          <strong>Frameworks:</strong> React, OpenCV, Pandas, NumPy, Three.js, Selenium, Beautiful Soup, Git<br>
+          <strong>Relevant Coursework:</strong> Probability, Statistics, and Stochastic Processes, Principles of Economics, Series and Matrices, Signals and
+          Systems, Data Structures in Biology, Numerical Methods, Biostatistics
         </p>
-        <h3>Burger King</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <h3>Taco Bell</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-
       </section>
 
       <blockquote>
-        <p>Thanks for reading!</p>
+        <p>"Only pressure makes diamonds" -Army General Patton</p>
       </blockquote>
-
-
     </main>
     
     <script type="module" src="main.js"></script>

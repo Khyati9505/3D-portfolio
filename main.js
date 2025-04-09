@@ -14,19 +14,26 @@ const renderer = new THREE.WebGLRenderer({
 
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
-// camera.position.setZ(30);
-// camera.position.setX(-3);
+
 camera.position.set(-3, 2, 30); 
 
 renderer.render(scene, camera);
 
 // Torus
 
-const geometry = new THREE.TorusKnotGeometry(6, 1.8, 64, 8, 9, 3);
-const material = new THREE.MeshStandardMaterial({ color: 0x4c0edd, });
-const torusKnot = new THREE.Mesh(geometry, material);
+// const geometry = new THREE.TorusKnotGeometry(6, 1.8, 64, 8, 9, 3);
+// const material = new THREE.MeshStandardMaterial({ color: 0x4c0edd, });
+// const torusKnot = new THREE.Mesh(geometry, material);
 
-scene.add(torusKnot);
+// scene.add(torusKnot);
+const points = [];
+for ( let i = 0; i < 10; i ++ ) {
+	points.push( new THREE.Vector2( Math.sin( i * 0.2 ) * 10 + 5, ( i - 5 ) * 2 ) );
+}
+const geometry = new THREE.LatheGeometry( points );
+const material = new THREE.MeshBasicMaterial( { color: 0x4c0edd, wireframe: true}, );
+const lathe = new THREE.Mesh( geometry, material );
+scene.add( lathe );
 
 // Lights
 
@@ -101,8 +108,8 @@ function moveCamera() {
   moon.rotation.y += 0.075;
   moon.rotation.z += 0.05;
 
-  person.rotation.y += 0.01;
-  person.rotation.z += 0.01;
+  person.rotation.y += 0.03;
+  person.rotation.z += 0.03;
 
   camera.position.z = t * -0.01;
   camera.position.x = t * -0.0002;
@@ -117,9 +124,9 @@ moveCamera();
 function animate() {
   requestAnimationFrame(animate);
 
-  torusKnot.rotation.x += 0.01;
-  torusKnot.rotation.y += 0.005;
-  torusKnot.rotation.z += 0.01;
+  lathe.rotation.x += 0.01;
+  lathe.rotation.y += 0.005;
+  lathe.rotation.z += 0.01;
 
   moon.rotation.x += 0.005;
 
