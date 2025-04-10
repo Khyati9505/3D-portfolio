@@ -64,7 +64,7 @@ function addStar() {
   scene.add(star);
 }
 
-Array(200).fill().forEach(addStar);
+Array(300).fill().forEach(addStar);
 
 // Background
 
@@ -97,7 +97,7 @@ scene.add(moon);
 moon.position.z = 30;
 moon.position.setX(-15);
 
-person.position.z = -5;
+person.position.z = -8;
 person.position.x = 2;
 
 // Scroll Animation
@@ -108,8 +108,9 @@ function moveCamera() {
   moon.rotation.y += 0.075;
   moon.rotation.z += 0.05;
 
-  person.rotation.y += 0.03;
-  person.rotation.z += 0.03;
+  person.rotation.x += 0.04;
+  person.rotation.y += 0.04;
+  person.rotation.z += 0.04;
 
   camera.position.z = t * -0.01;
   camera.position.x = t * -0.0002;

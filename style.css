@@ -1,6 +1,6 @@
 @import url("https://use.typekit.net/jmk3xov.css");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@700&family=Roboto:wght@400&display=swap");
 
 :root {
   --dark-bg: rgba(25, 25, 25, 0.95);
@@ -30,34 +30,61 @@ main {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
+.main-header {
+  background-color: rgba(25, 25, 25, 0.95); 
+  padding: 20px;
+  text-align: center;
+  border-radius: 15px; 
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); 
+}
 
-/* h1, h2, h3 {
-  font-family: elevon, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-} */
+.main-title {
+  font-family: 'Exo', sans-serif;
+  font-size: 4rem; 
+  font-weight: 700; 
+  text-align: center;
+  color: #f0f0f0;
+  letter-spacing: 2px; 
+  background: linear-gradient(90deg, #4c0edd, #8a2be2); 
+  -webkit-background-clip: text; 
+  background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+header p a {
+  margin: 0 60px; 
+  color: #f0f0f0; 
+  font-size: 24px;
+  text-decoration: none;
+}
+
+header p a:hover {
+  color: #4c0edd; 
+}
+
+
 h1, h2, h3 {
   font-family: var(--primary-font);
 }
 
 h1 {
-  font-size: 3rem; /* Larger main heading */
-  font-weight: bold; /* Bold for emphasis */
+  font-size: 3rem; 
+  font-weight: bold; 
 }
 
 h2 {
-  font-size: 1.8rem; /* Subheadings */
+  font-size: 1.8rem; 
   font-weight: 550;
 }
 
 h3 {
-  font-size: 1.5rem; /* Smaller subheadings */
+  font-size: 1.5rem; 
   font-weight: 400;
 }
 
 p {
-  font-size: 1.125rem; /* Larger body text for readability */
-  line-height: 1.8; /* Better spacing between lines */
+  font-size: 1.125rem; 
+  line-height: 1.8;
 }
 
 header {
@@ -66,34 +93,36 @@ header {
   font-size: 2.5rem;
   padding: 2rem;
   margin-bottom: var(--spacing);
-  
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 section {
-  grid-column: 2 / 8;
-  padding: 1rem;
-  background: var(--dark-bg);
-  font-size: 1.25rem;
-  line-height: 1.5;
-  margin-bottom: var(--spacing);
-  border-radius: 10px;
+  grid-column: 2 / 8; /* Same alignment as before */
+  padding: 1.5rem; /* Slightly increased padding for better spacing */
+  background: var(--dark-bg); /* Dark background for consistency */
   background-color: #2c0a4a;
+  font-size: 1.25rem; /* Maintain readable font size */
+  line-height: 1.8; /* Improve text readability */
+  margin-bottom: var(--spacing); /* Consistent spacing between sections */
+  border-radius: 15px; /* Rounded corners for a modern look */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
 }
 
 blockquote {
-  margin: 0;
-  padding: 0;
-  grid-column: 2 / span 9;
-  margin-bottom: var(--spacing);
-  border-radius: 40px;
+  margin: 0 auto; /* Center the blockquote */
+  padding: 20px; /* Add padding for better spacing */
+  grid-column: 4 / 8; /* Adjust column span to match other sections */
+  margin-bottom: var(--spacing); /* Consistent spacing */
+  border-radius: 15px; /* Rounded corners for a modern look */
+  background-color: rgb(116, 167, 212); /* Single color background */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
 blockquote p {
-  color: #f0f0f0;
-  background-color: rgb(116, 167, 212);
-  font-size: 2rem;
-  display: inline;
-  line-height: 1;
+  color: #f0f0f0; /* White text for contrast */
+  font-size: 1.5 rem; /* Adjust font size for readability */
+  line-height: 1.5; /* Improve text spacing */
+  margin: 0; /* Remove default margins */
 }
 
 .left {
